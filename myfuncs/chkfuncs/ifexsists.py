@@ -21,8 +21,3 @@ def is_file_exists(file_path):
     :return: True или False
     """
     return os.path.exists(file_path)
-
-
-if __name__ == '__main__':
-    test = r'D:\Work\EnCase\ItemExtractor\tests.py'
-    print(is_file_exists(test))
