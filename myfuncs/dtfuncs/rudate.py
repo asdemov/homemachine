@@ -1,5 +1,4 @@
 ﻿# -*- coding:utf-8 -*-
-# date in russian format
 from datetime import date
 
 
