@@ -23,4 +23,4 @@ def get_ru_date_from_list(splitter='.'):
 
 
 if __name__ == '__main__':
-    print(get_ru_date_from_list())
+    assert get_ru_date_list() == ['17', '10', '2025']
