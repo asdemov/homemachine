@@ -18,9 +18,16 @@ def get_ru_date_from_list(splitter='.'):
     :param splitter: разделитель в строке даты
     :return: строка с датой
         """
-    ru_date = get_ru_date_list()
-    return f'{splitter}'.join(ru_date)
+    splitters = ('.', '/', '-')
+    if splitter in splitters:
+        ru_date = get_ru_date_list()
+        return f'{splitter}'.join(ru_date)
+    else:
+        print('Указан неверный разделитель даты!')
 
 
 if __name__ == '__main__':
     assert get_ru_date_list() == ['17', '10', '2025']
+    assert get_ru_date_from_list() == '17.10.2025'
+    assert get_ru_date_from_list(splitter='/') == '17/10/2025'
+    assert get_ru_date_from_list(3) == None
