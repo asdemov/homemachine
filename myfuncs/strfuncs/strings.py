@@ -12,4 +12,4 @@ def get_quoted_text(text, open_s=171, close_s=187):
 
 
 if __name__ == '__main__':
-    print(get_quoted_text('test'))
+    assert get_quoted_text('test', open_s=ord(';'), close_s=ord(';')) == ';test;'
