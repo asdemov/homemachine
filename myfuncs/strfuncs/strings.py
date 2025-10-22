@@ -1,3 +1,13 @@
+def isint(number: int) -> bool:
+    """
+    Проверка целочисленного аргумента
+
+    :param number: предолагается целое число
+    :return: True или False
+    """
+    return isinstance(number, int)
+
+
 def get_quoted_text(text, open_s=171, close_s=187):
     """
 
@@ -13,3 +23,8 @@ def get_quoted_text(text, open_s=171, close_s=187):
 
 if __name__ == '__main__':
     assert get_quoted_text('test', open_s=ord(';'), close_s=ord(';')) == ';test;'
+    assert isint(5) == True
+    assert isint('') == False
+    assert isint(1.25) == False
+    assert isint('true') == False
+    assert isint(0) == True
