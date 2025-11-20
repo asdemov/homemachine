@@ -19,5 +19,11 @@ def is_file_exists(file_path):
 
     :param file_path: путь к файлу и имя файла
     :return: True или False
-    """
-    return os.path.exists(file_path)
+        """
+    flag = None
+    if isinstance(file_path, str):
+        flag = os.path.exists(file_path)
+    else:
+        flag = os.path.exists(str(file_path))
+    return flag
+
